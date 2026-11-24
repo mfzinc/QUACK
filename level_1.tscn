@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://3hvki8d2du7v"]
+
+[ext_resource type="Texture2D" uid="uid://cjpqlspynoupx" path="res://stage1.png" id="1_hbghi"]
+[ext_resource type="PackedScene" uid="uid://5paertb2yasq" path="res://collision.tscn" id="2_hn12h"]
+
+[node name="Stage1" type="Sprite2D" unique_id=2073254781]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_hbghi")
+
+[node name="StaticBody2D2" parent="." unique_id=881584057 instance=ExtResource("2_hn12h")]
+position = Vector2(-778, 10)
+scale = Vector2(1, 1)
+
+[node name="StaticBody2D5" parent="." unique_id=1909892523 instance=ExtResource("2_hn12h")]
+position = Vector2(-238.00003, 74)
+scale = Vector2(6.98, 1)
+
+[node name="StaticBody2D7" parent="." unique_id=628720663 instance=ExtResource("2_hn12h")]
+position = Vector2(32, -30)
+scale = Vector2(3.93, 1)
+
+[node name="StaticBody2D8" parent="." unique_id=474639346 instance=ExtResource("2_hn12h")]
+position = Vector2(44, -34)
+scale = Vector2(1.35, 1)
+
+[node name="StaticBody2D11" parent="." unique_id=1136867029 instance=ExtResource("2_hn12h")]
+position = Vector2(274, 134)
+scale = Vector2(4.92, 1)
+
+[node name="StaticBody2D12" parent="." unique_id=1514560334 instance=ExtResource("2_hn12h")]
+position = Vector2(288, 124)
+scale = Vector2(2.73, 1)
+
+[node name="StaticBody2D13" parent="." unique_id=1994255803 instance=ExtResource("2_hn12h")]
+position = Vector2(264.00003, 152)
+scale = Vector2(5.83, 1)
+
+[node name="StaticBody2D14" parent="." unique_id=1349120983 instance=ExtResource("2_hn12h")]
+position = Vector2(636, 22)
+scale = Vector2(13.87, 1)
+
+[node name="StaticBody2D15" parent="." unique_id=931353512 instance=ExtResource("2_hn12h")]
+position = Vector2(572, 8)
+scale = Vector2(1.42, 1)
+
+[node name="StaticBody2D16" parent="." unique_id=445598648 instance=ExtResource("2_hn12h")]
+position = Vector2(320, 188)
+scale = Vector2(1.42, 1)
+
+[node name="StaticBody2D17" parent="." unique_id=1111043558 instance=ExtResource("2_hn12h")]
+position = Vector2(346, 188)
+scale = Vector2(1.42, 1)
+
+[node name="StaticBody2D18" parent="." unique_id=194916810 instance=ExtResource("2_hn12h")]
+position = Vector2(374, 190)
+scale = Vector2(1.42, 1)
+
+[node name="StaticBody2D19" parent="." unique_id=866835540 instance=ExtResource("2_hn12h")]
+position = Vector2(402, 190)
+scale = Vector2(1.42, 1)
+
+[node name="StaticBody2D20" parent="." unique_id=1390525782 instance=ExtResource("2_hn12h")]
+position = Vector2(422.00003, 188)
+rotation = -0.20943952
+scale = Vector2(5.32, 1)
+
+[node name="StaticBody2D21" parent="." unique_id=36326201 instance=ExtResource("2_hn12h")]
+position = Vector2(478.00003, 170)
+rotation = -0.55850536
+scale = Vector2(5.32, 1)
+
+[node name="StaticBody2D22" parent="." unique_id=1138519252 instance=ExtResource("2_hn12h")]
+position = Vector2(516, 140.00002)
+rotation = -0.73129296
+scale = Vector2(5.32, 1)
+
+[node name="StaticBody2D23" parent="." unique_id=1761004509 instance=ExtResource("2_hn12h")]
+position = Vector2(656, 102)
+rotation = -6.2831855
+scale = Vector2(12.14, 1.22)
+
+[node name="StaticBody2D9" parent="." unique_id=1662789835 instance=ExtResource("2_hn12h")]
+position = Vector2(-4.000001, -14)
+rotation = 2.3736477
+scale = Vector2(2.65, 1)
+
+[node name="StaticBody2D10" parent="." unique_id=571965820 instance=ExtResource("2_hn12h")]
+position = Vector2(78, -20)
+rotation = 1.0995574
+scale = Vector2(1.96, 1)
+
+[node name="StaticBody2D6" parent="." unique_id=1842522126 instance=ExtResource("2_hn12h")]
+position = Vector2(-318.00003, 86)
+rotation = -0.5270894
+scale = Vector2(2.21, 1)
+
+[node name="StaticBody2D3" parent="." unique_id=1850715066 instance=ExtResource("2_hn12h")]
+position = Vector2(-642.00006, 16)
+scale = Vector2(19.56, 1)
+
+[node name="StaticBody2D4" parent="." unique_id=1731376801 instance=ExtResource("2_hn12h")]
+position = Vector2(-400, 27.999994)
+rotation = -2.5935593
+scale = Vector2(1.45, 1)

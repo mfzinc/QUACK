@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://ivm2r8yacv54"]
+
+[ext_resource type="Script" uid="uid://bo7wvtrsbiee" path="res://main.gd" id="1_dg77c"]
+[ext_resource type="PackedScene" uid="uid://5paertb2yasq" path="res://collision.tscn" id="1_lquwl"]
+[ext_resource type="PackedScene" uid="uid://ddteincofpgqb" path="res://bg.tscn" id="2_ycdy4"]
+[ext_resource type="PackedScene" uid="uid://hh6rewm41xnx" path="res://player.tscn" id="3_w48qg"]
+[ext_resource type="PackedScene" uid="uid://3hvki8d2du7v" path="res://level_1.tscn" id="6_2cqfq"]
+[ext_resource type="Texture2D" uid="uid://ukfuf54md7ll" path="res://ParallaxBG/Parallax BG1.jpg" id="6_4c57u"]
+[ext_resource type="Texture2D" uid="uid://dgsu60leyreew" path="res://ParallaxBG/Parallax BG2.png" id="7_efxa6"]
+[ext_resource type="Texture2D" uid="uid://ctjepmxexfgkq" path="res://ParallaxBG/Parallax BG3.png" id="8_dg77c"]
+[ext_resource type="Texture2D" uid="uid://bx65p4baqx68c" path="res://ParallaxBG/Parallax BG4.png" id="9_ycdy4"]
+[ext_resource type="Texture2D" uid="uid://dhjcqk15c32x" path="res://ParallaxBG/Parallax BG5.png" id="10_w48qg"]
+[ext_resource type="Script" uid="uid://g1wrifna1w87" path="res://area_2d.gd" id="12_ycdy4"]
+[ext_resource type="AudioStream" uid="uid://cnaohdtqgcyg0" path="res://fall.mp3" id="13_w48qg"]
+[ext_resource type="AudioStream" uid="uid://xvxiv5bedlev" path="res://bgmusic.mp3" id="13_ycdy4"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_x1w7q"]
+normal = Vector2(-0.012109536, -0.9999267)
+distance = -14.020991
+
+[node name="Main" type="Node2D" unique_id=1702828531]
+script = ExtResource("1_dg77c")
+
+[node name="Bg" parent="." unique_id=910744086 instance=ExtResource("2_ycdy4")]
+
+[node name="bgmusic" type="AudioStreamPlayer2D" parent="Bg" unique_id=1449707278]
+stream = ExtResource("13_ycdy4")
+autoplay = true
+
+[node name="StaticBody2D" parent="." unique_id=881584057 instance=ExtResource("1_lquwl")]
+position = Vector2(-394, -43)
+
+[node name="player" parent="." unique_id=838358115 instance=ExtResource("3_w48qg")]
+position = Vector2(246, 470)
+SLIDE_BOOST = 30.0
+
+[node name="Stage1" parent="." unique_id=2073254781 instance=ExtResource("6_2cqfq")]
+position = Vector2(546, 517)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=819907734]
+offset = Vector2(0, 150)
+scale = Vector2(0.71, 0.71)
+transform = Transform2D(0.71, 0, 0, 0.71, 0, 150)
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=312662671]
+scale = Vector2(0.92, 0.92)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1509214532]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("6_4c57u")
+centered = false
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1210456185]
+position = Vector2(-73.23945, -9.85915)
+scale = Vector2(0.92, 0.92)
+motion_scale = Vector2(0.8, 0.8)
+motion_mirroring = Vector2(1000, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2" unique_id=1171546725]
+position = Vector2(-148.49968, 140.84508)
+scale = Vector2(0.6, 0.8)
+texture = ExtResource("7_efxa6")
+centered = false
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1258902135]
+scale = Vector2(0.92, 0.92)
+motion_scale = Vector2(0.9, 0.9)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3" unique_id=1124391336]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("8_dg77c")
+centered = false
+
+[node name="ParallaxLayer4" type="ParallaxLayer" parent="ParallaxBackground" unique_id=269012366]
+scale = Vector2(0.92, 0.92)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer4" unique_id=1896256486]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("9_ycdy4")
+centered = false
+
+[node name="ParallaxLayer5" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1240942383]
+scale = Vector2(0.92, 0.92)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer5" unique_id=2047946411]
+scale = Vector2(0.92, 0.92)
+texture = ExtResource("10_w48qg")
+centered = false
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=294951779]
+position = Vector2(246, 470)
+
+[node name="Killzone" type="Area2D" parent="." unique_id=333936576]
+position = Vector2(-42, -56)
+script = ExtResource("12_ycdy4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1411902355]
+position = Vector2(517, 897)
+scale = Vector2(7.7, 1)
+shape = SubResource("WorldBoundaryShape2D_x1w7q")
+
+[node name="fall" type="AudioStreamPlayer" parent="Killzone" unique_id=1664923254]
+stream = ExtResource("13_w48qg")
+
+[connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
